@@ -131,7 +131,7 @@ function initializeGSAPAnimations() {
       start: "top top",
       end: () => "+=" + horizontal.scrollWidth,  // 전체 스크롤 가로 길이 계산
       pin: true,
-      scrub: 1.5,
+      scrub: 1,
       // snap: {
       //   snapTo: 1 / (sections.length - 1),
       //   inertia: true,
@@ -150,12 +150,18 @@ function animateText(str, targetId, shuffleId) {
   const shuffle = document.getElementById(shuffleId);
   const chars = 'aAbBcCdDeEfFgGhHiIjJkKlLmMnNoOpPqQrRsStTuUvVwWxXyYzZ123456789@$%&*^!?#()';
   let index = 0;
+  let counter = 0; // 랜덤 문자 반복을 위한 추가 변수
 
   const interval = setInterval(() => {
     if (index < str.length) {
-      target.appendChild(document.createTextNode(str[index]));
-      shuffle.textContent = chars[Math.floor(Math.random() * chars.length)];
-      index++;
+      // 랜덤 문자 표시 후 원래 문자 추가
+      if (counter % 5 === 0) {
+        target.appendChild(document.createTextNode(str[index]));
+        index++; // 원래 텍스트의 다음 문자로 이동
+      } else {
+        shuffle.textContent = chars[Math.floor(Math.random() * chars.length)];
+      }
+      counter++;
     } else {
       clearInterval(interval);
       shuffle.textContent = ''; // 남아 있는 랜덤 문자 제거
@@ -164,5 +170,3 @@ function animateText(str, targetId, shuffleId) {
   
   target.textContent = '';  // 초기화
 }
-
-

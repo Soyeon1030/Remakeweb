@@ -243,6 +243,22 @@ body.dark-mode footer {
   color: #393b3d;
   border-radius: 1.875rem;
 }
+#parallax-nav #menu-icon {
+  display: block;
+  width: 33px;
+  height: 33px;
+  background-color: transparent;
+  position: absolute;
+  cursor: pointer;
+}
+#parallax-nav #menu-icon span {
+  display: block;
+  width: 100%;
+  background-color: #FFFFFF;
+  height: 5px;
+  position: absolute;
+  border-radius: 20px;
+}
 
 footer {
   width: 100%;
@@ -469,7 +485,7 @@ footer .footer-wrap .footer-right .sns-btn .blog:hover {
   height: 100vh;
 }
 #parallax-cont .sec {
-  max-width: 90rem;
+  min-width: 90rem;
   min-height: 56.25rem;
   margin: 0 auto;
 }
@@ -486,6 +502,15 @@ footer .footer-wrap .footer-right .sns-btn .blog:hover {
 #parallax-cont .sec .sec-tit p {
   font-size: 1.5rem;
   color: #848586;
+}
+#parallax-cont .sec2 {
+  background: #e7e7e7;
+}
+#parallax-cont .sec3 {
+  background: #bfbfbf;
+}
+#parallax-cont .sec4 {
+  background: #595a5a;
 }
 
 /*# sourceMappingURL=style.css.map */
