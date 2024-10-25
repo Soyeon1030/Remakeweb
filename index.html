@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>(주)엠바스 | 간편한 AI 앱 제작 플랫폼</title>
+  <meta name="title" content="(주)엠바스 ㅣ App 창업자 및 중소사업자를 위한 mBaaS 플랫폼">
+  <meta name="description" content="엠바스에서 IT 지식이 없어도 간단하게 나만의 앱을 제작할 수 있습니다. 앱 창업자와 중소사업자를 위한 AI 기반 mBaaS 플랫폼으로, 빠르고 쉽게 모바일 앱을 개발해보세요.">
+  <meta name="keywords" content="앱 개발 플랫폼, 간편 앱 제작, mBaaS 플랫폼, AI 앱 개발, 쇼핑몰 앱 제작, 앱 개발, 앱 창업, 무료 앱 제작 도구, 엠바스 플랫폼, 어플제작업체, 엠바스, mbaas">
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="엠바스 | 간편한 AI 앱 제작 플랫폼">
+  <meta property="og:description" content="엠바스에서 누구나 쉽고 빠르게 나만의 앱을 만들 수 있습니다. AI 기반의 mBaaS 플랫폼으로 창업자와 중소사업자를 지원합니다.">
+  <meta property="og:image" content="https://example.com/img/og-image.jpg">
+  <meta property="og:url" content="https://mbaas.kr">
+  <meta property="og:type" content="website">
+  <!-- css -->
+  <link rel="stylesheet" href="./css/reset.css"> 
+  <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+  <link rel="shortcut icon" href="./img/faviconB.ico" type="image/x-icon" />
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div id="header"></div>
+  <main id="parallax-cont">
+    <section>
+      <div id="intro">
+        <div class="cover">
+          <span id="anim"></span><span id="shuffle"></span>
+        </div>
+      </div>
+    </section>
+    <section id="text-ani" class="parallax-item">
+      <video autoplay muted loop playsinline class="video-bg">
+        <source src="img/bg01.mp4" type="video/mp4">
+      </video>
+      <div class="text-wrapper">
+        <div class="parallax-item-text t1">누구나 쉽게</div>
+        <div class="parallax-item-text t2">나만의 앱을 만들수 있다?</div>
+        <div class="parallax-item-text t3">바로</div>
+        <div class="parallax-item-text t4">엠바스에서</div>
+        <div class="parallax-item-text t5">가능합니다.</div>
+        <div class="parallax-item-text t6">전 국민 1인 1앱 시장을 선두하다.</div>
+        <div class="parallax-item-text t7">Mobile Beyond Ai App Service</div>
+      </div>
+    </section>
+    <section class="bg bg1">  
+      <div class="box box1"></div>
+    </section>
+    <section class="sec sec1">
+      <div class="sec-tit">
+        <h2>앱을 만들기 위해 많은 어려움이 있으셨나요?</h2>
+        <p>부가 설명 텍스트입니다. 어떤가요?</p>
+      </div>
+    </section>
+    <div id="horizontal">
+      <section class="sec sec2"></section>
+      <section class="sec sec3"></section>
+    </div>
+    <section class="sec sec4"></section>
+  </main>
+  <div id="footer"></div>
+  <!-- script -->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.3/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1/bundled/lenis.min.js"></script>
+  <script src="js/common.js"></script>
+   <script>
+    // 페이지 로드 시 공통 내용 로드
+    loadContent('header.html', 'footer.html');
+
+    // 텍스트 애니메이션 실행
+    animateText('mBaaS', 'anim', 'shuffle');
+  </script>
+</body>
+</html>

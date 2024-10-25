@@ -1,0 +1,72 @@
+@import "./variable";
+
+
+// 반응형 
+@mixin respond($size) {
+  @media screen and (max-width:$size) {
+      @content;
+  }
+}
+@mixin img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+@mixin flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@mixin flex-start {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+@mixin flex-end {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+@mixin ellipsis($lines: 1) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+@mixin icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  img {
+    @include img
+  }
+}
+@mixin sns {
+  width: 1.875rem;
+  height: 1.875rem;
+  img {
+    @include img
+  }
+}
+//position mixin
+@mixin pos($p: relative, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $p;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    right: $right;
+  }
+  @if $bottom != null {
+    bottom: $bottom;
+  }
+  @if $left != null {
+    left: $left;
+  }
+}
